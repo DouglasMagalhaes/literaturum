@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Contato - Literaturum</title>
+  <link rel="stylesheet" href="css/style_contato.css">
 </head>
 <body>
-    
+  <header>
+    <h1>Literaturum</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html" class="ativo">Contato</a></li>
+        <li><a href="upload.html">Upload</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contato">
+    <h2>Entre em Contato</h2>
+
+    <p>Se você deseja colaborar com livros, reportar erros ou enviar sugestões, entre em contato:</p>
+
+    <ul class="meios-contato">
+      <li>Email: <a href="mailto:douglas.magalhaes.v@gmail.com">douglas.magalhaes.v@gmail.com</a></li>
+    </ul>
+
+    <section class="formulario">
+      <h3>Formulário de Mensagem</h3>
+      <form action="https://formsubmit.co/douglas.magalhaes.v@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="Mensagem do site Literaturum">
+
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Douglas Magalhães de Vasconcelos - Literaturum</p>
+  </footer>
 </body>
 </html>
