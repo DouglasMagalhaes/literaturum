@@ -1,11 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Upload de Livro - Literaturum</title>
+    <link rel="stylesheet" href="css/style_upload.css">
 </head>
+
 <body>
-    
+    <header>
+        <h1>Literaturum</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="upload.html" class="ativo">Upload</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formulario">
+            <h2>Enviar Novo Livro</h2>
+            <form id="form-upload" method="post" enctype="multipart/form-data">
+                <label for="titulo">Título do Livro</label>
+                <input type="text" id="titulo" name="titulo" required>
+
+                <label for="categoria">Categoria</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Selecione...</option>
+                    <option value="educacao">Educação</option>
+                    <option value="tecnologia">Tecnologia</option>
+                    <option value="filosofia">Filosofia</option>
+                    <option value="literatura">Literatura</option>
+                    <option value="programacao">Python</option>
+                </select>
+
+                <label for="subcategoria">Subcategoria</label>
+                <select id="subcategoria" name="subcategoria" required>
+                    <option value="">Escolha uma categoria primeiro</option>
+                </select>
+
+                <label for="arquivo">Selecionar PDF</label>
+                <input type="file" id="arquivo" name="arquivo" accept="application/pdf" required>
+
+                <button type="submit">Enviar Livro</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Douglas Magalhães de Vasconcelos - Literaturum</p>
+    </footer>
+
+    <script src="js/upload.js"></script>
 </body>
+
 </html>

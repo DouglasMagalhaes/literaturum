@@ -1,8 +1,7 @@
 body {
   font-family: 'Libertinus Mono', monospace;
+  background-color: #f7f7f7;
   margin: 0;
-  padding: 0;
-  background: #f9f9f9;
   color: #222;
 }
 
@@ -22,21 +21,11 @@ header {
   }
 }
 
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
 nav ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  gap: 1rem;
   padding: 0;
-  margin: 0;
-}
-
-nav ul li {
-  margin-left: 1.5rem;
 }
 
 nav ul li a {
@@ -45,64 +34,90 @@ nav ul li a {
   font-weight: bold;
 }
 
-nav ul li a.ativo {
-  text-decoration: underline;
-}
-
-main {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-main h2 {
+.pesquisa {
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  margin: 2rem auto;
+}
+
+.pesquisa input {
+  width: 80%;
+  max-width: 400px;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 1rem;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/54/54481.png');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding-left: 40px;
+  outline: none;
 }
 
 .catalogo {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.categoria {
+  margin-bottom: 3rem;
+}
+
+.categoria h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.subcategoria {
+  margin-top: 1.5rem;
+}
+
+.subcategoria h3 {
+  color: #444;
+  margin-bottom: 0.8rem;
+}
+
+.livros {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .livro {
   background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 200px;
   padding: 1rem;
+  border-radius: 8px;
+  width: 180px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
 }
 
 .livro img {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 4px;
+  height: auto;
   margin-bottom: 0.5rem;
 }
 
-.livro h3 {
-  font-size: 1.1rem;
+.livro h4 {
+  font-size: 1rem;
   margin: 0.5rem 0;
 }
 
 .livro a {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #2980b9;
+  margin-top: 0.5rem;
   color: white;
-  text-decoration: none;
+  background-color: #2c3e50;
+  padding: 0.4rem 0.6rem;
   border-radius: 4px;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
 .livro a:hover {
-  background: #1a5e8c;
+  background-color: #1a252f;
 }
 
 footer {
