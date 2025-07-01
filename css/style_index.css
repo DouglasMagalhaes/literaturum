@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libertinus Mono', monospace;
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 700px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Campo de Pesquisa */
+.pesquisa {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.pesquisa input {
+    width: 80%;
+    max-width: 400px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    outline: none;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/54/54481.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.apresentacao p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Botão principal */
+.botao {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #1a252f;
+}
+
+/* Rodapé */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
