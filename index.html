@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Literaturum</title>
-    <link rel="tmp" href="icon/tmp_favicon.ico">
-    <link rel="stylesheet" href="css/style_index.css">
+    
+    <!-- Ícone do site -->
+    <link rel="icon" href="icon/tmp_favicon.ico" type="image/x-icon">
+    
+    <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style_index.css">
 </head>
 
 <body>
@@ -31,8 +37,7 @@
             <h2>Bem-vindo ao Literaturum</h2>
             <p>
                 Em um mundo onde o conhecimento é o verdadeiro poder, o Literaturum nasce como um espaço livre para
-                mentes curiosas.
-                Aqui, você encontrará uma coleção de livros para baixar, explorar e transformar sua forma de pensar.
+                mentes curiosas. Aqui, você encontrará uma coleção de livros para baixar, explorar e transformar sua forma de pensar.
             </p>
             <p>
                 Seja você um estudante, autodidata ou apenas alguém que ama leitura, este projeto é para você.
@@ -43,31 +48,33 @@
             </p>
             <a class="botao" href="catalogo.html">Explorar Livros</a>
         </section>
+
+        <section class="pesquisa">
+            <input type="text" id="campo-pesquisa" placeholder="Buscar livro por título...">
+        </section>
+
+        <section class="catalogo" id="lista-livros">
+            <div class="livro">
+                <img src="img/Curso Intensivo de Python.png" alt="Curso Intensivo de Python">
+                <h3>Curso Intensivo de Python</h3>
+                <a href="livros/livro1.pdf" download>Baixar</a>
+            </div>
+
+            <div class="livro">
+                <img src="img/livro2.jpg" alt="Sabedoria Antiga">
+                <h3>Sabedoria Antiga</h3>
+                <a href="livros/livro2.pdf" download>Baixar</a>
+            </div>
+
+            <!-- Adicione mais livros aqui -->
+        </section>
     </main>
-
-    <section class="pesquisa">
-        <input type="text" id="campo-pesquisa" placeholder="Buscar livro por título...">
-    </section>
-
-    <section class="catalogo" id="lista-livros">
-        <div class="livro">
-            <img src="img/Curso Intensivo de Python.png" alt="Curso Intensivo de Python">
-            <h3>Curso Intensivo de Python</h3>
-            <a href="livros/livro1.pdf" download>Baixar</a>
-        </div>
-
-        <div class="livro">
-            <img src="img/livro2.jpg" alt="Livro 2">
-            <h3>Sabedoria Antiga</h3>
-            <a href="livros/livro2.pdf" download>Baixar</a>
-        </div>
-
-        <!-- Adicione mais livros aqui -->
-    </section>
 
     <footer>
         <p>&copy; 2025 Douglas Magalhães de Vasconcelos - Literaturum</p>
     </footer>
+
+    <!-- Script da pesquisa -->
     <script>
         const campoPesquisa = document.getElementById('campo-pesquisa');
         const livros = document.querySelectorAll('.livro');
@@ -77,11 +84,7 @@
 
             livros.forEach(livro => {
                 const titulo = livro.querySelector('h3').textContent.toLowerCase();
-                if (titulo.includes(termo)) {
-                    livro.style.display = 'block';
-                } else {
-                    livro.style.display = 'none';
-                }
+                livro.style.display = titulo.includes(termo) ? 'block' : 'none';
             });
         });
     </script>
